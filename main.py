@@ -2,6 +2,7 @@ import pygame as pg
 import sys
 from funksii import find_left_corner
 from knopo4ki import knopo4ki
+from Picture import Picture
 
 pg.font.init()
 
@@ -91,34 +92,49 @@ while game:
 
                     sc.blit(story, (find_left_corner(story.get_size())))
 
+                    if count1 == 1:
+                        picture = Picture((1920,1080), 'kartinki/furgon.jpg', (0, 0))
+                        picture.prorisovka(sc)
+
+                    if count1 == 4:
+                        picture = Picture((1920,1080), 'kartinki/церковь.jpg', (0, 0))
+                        picture.prorisovka(sc)
+
+
+
                     pg.display.update()
 
                     print(story.get_size())
 
                     count1 += 1
 
+
+
+
                     if count1 == 11:
                         count2 = 3
                         pass
 
             if count2 == 3:
+                picture = Picture((1280,905),'kartinki/персонажи.jpg',(0,0))
+                picture.prorisovka(sc)
                 #knopka 1
-                knopka = knopo4ki(choice_1[0],pos1)
+                knopka = knopo4ki(choice_1[0],pos1,(100,30,130))
 
                 knopka.prorisovka(sc)
 
                 # knopka 2
-                knopka = knopo4ki(choice_1[1],pos2)
+                knopka = knopo4ki(choice_1[1],pos2,(78,60,60))
 
                 knopka.prorisovka(sc)
 
                 #knopka 3
-                knopka = knopo4ki(choice_1[2],pos3)
+                knopka = knopo4ki(choice_1[2],pos3,(10,140,13))
 
                 knopka.prorisovka(sc)
 
                 #knopka 4
-                knopka = knopo4ki(choice_1[3],pos4)
+                knopka = knopo4ki(choice_1[3],pos4,(200,30,50))
 
                 knopka.prorisovka(sc)
 

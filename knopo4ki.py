@@ -6,10 +6,10 @@ WHITE = [255,255,255]
 
 
 class knopo4ki:
-    def __init__(self,text,pos):
+    def __init__(self,text,pos,col):
         self.text = text
         self.action = None
-        self.color = BLACK
+        self.color = col
         self.pos = pos
 
     def prorisovka(self,sc):
@@ -21,3 +21,5 @@ class knopo4ki:
 
         sc.blit(knopka,self.pos)
 
+    def __del__(self):
+        print('Кнопка удалена!')
