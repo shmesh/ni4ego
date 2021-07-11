@@ -7,6 +7,11 @@ from Picture import Picture
 pg.font.init()
 
 
+
+
+
+
+
 sc = pg.display.set_mode((1920,1080))
 sc.fill((255, 255, 255))
 
@@ -32,7 +37,7 @@ pos3 = (900,640,150,70)
 pos4 = (1100,640,150,70)
 
 
-
+part_game = 0
 
 
 
@@ -41,6 +46,18 @@ pos4 = (1100,640,150,70)
 
 
 WHITE = [255,255,255]
+
+
+
+
+
+#  part = 0
+
+
+
+
+
+
 
 ch1 = ['Ты оказываешься в машине полной подростков .',
        'Которые едут на тусовку на старом , но стильном фургончике .',
@@ -110,10 +127,11 @@ while game:
 
 
 
-
                     if count1 == 11:
                         count2 = 3
                         pass
+
+
 
             if count2 == 3:
                 picture = Picture((1280,905),'kartinki/персонажи.jpg',(0,0))
@@ -141,6 +159,12 @@ while game:
                 pg.display.update()
 
 
+
+
+
+
+
+#  part = 1
 
 
 

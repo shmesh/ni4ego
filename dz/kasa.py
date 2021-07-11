@@ -18,6 +18,13 @@ class Kasa:
         #self.zlentu = 0
         #self.lenta = self.zlentu
 
+    def robotakas(self,nomer, pkasa):
+        self.lenta -= pkasa[0]
+
+        self.pcount += pkasa[0]
+
+        print(self.pcount, '- обслужено',nomer ,'-й','касой')
+
         # while True:
         #     if self.day == 0  and  self.day == self.dayc:
         #         self.zlentu = r.randint(3, 13)
@@ -44,28 +51,35 @@ class Kasa:
                 #                 input
 
 
-    def obsushivanie(self):
-
-        for i in range(self.lenta):
-            self.lenta -= 1
-            self.pcount += 1
-            print(self.pcount, '- обслужено')
-
-    def count(self,kasa2):
-            self.lenta =- 1
-
-            self.pcount += 1
 
 
-            kasa2.lenta =- 1
-
-            self.pcount += 1
-            print(self.pcount, '- обслужено')
+def obsushivanie(kasa1, kasa2, kasa3, pkasa, pkasa2, pkasa3):
+    kasa1.robotakas(1,pkasa)
+    kasa2.robotakas(2,pkasa2)
+    kasa3.robotakas(3, pkasa3)
 
 
 
+def rospredilenie(p):
+     pkasa = []
+     pkasa2 = []
+     pkasa3 = [1]
+     if p %2==0:
+         pple = p //2
+         pkasa.append(pple)
+         pkasa2.append(pple)
+         return pkasa , pkasa2 ,pkasa3
+     if p %2!=0:
+         pple = p //2 + 1
+         pkasa.append(pple)
+         pkasa2.append(pple + 1)
+         return pkasa , pkasa2 , pkasa3
 
 
-kasa1 = Kasa(4)
-kasa2 = Kasa(4)
-kasa1.count(kasa2)
+
+
+kasa1 = Kasa(10)
+kasa2 = Kasa(10)
+kasa3 = Kasa(10)
+pple = rospredilenie(23)
+obsushivanie(kasa1,kasa2,kasa3,pple[0],pple[1],pple[2])
