@@ -1,8 +1,9 @@
 import pygame as pg
 import sys
 from funksii import find_left_corner
-from knopo4ki import knopo4ki
+from knopo4ki import Knopo4ki
 from Picture import Picture
+from Text import Text
 
 pg.font.init()
 
@@ -105,9 +106,18 @@ while game:
                 if i.key == pg.K_SPACE:
                     sc.fill(WHITE)
 
-                    story =  storyp.render(ch1[count1], True, (0, 0, 0))
+                     story =  storyp.render(ch1[count1], True, (0, 0, 0))
 
-                    sc.blit(story, (find_left_corner(story.get_size())))
+                     sc.blit(story, (find_left_corner(story.get_size())))
+
+
+                    Text
+
+
+
+
+
+
 
                     if count1 == 1:
                         picture = Picture((1920,1080), 'kartinki/furgon.jpg', (0, 0))
@@ -137,22 +147,22 @@ while game:
                 picture = Picture((1280,905),'kartinki/персонажи.jpg',(0,0))
                 picture.prorisovka(sc)
                 #knopka 1
-                knopka = knopo4ki(choice_1[0],pos1,(100,30,130))
+                knopka = Knopo4ki(choice_1[0], pos1, (100, 30, 130))
 
                 knopka.prorisovka(sc)
 
                 # knopka 2
-                knopka = knopo4ki(choice_1[1],pos2,(78,60,60))
+                knopka = Knopo4ki(choice_1[1], pos2, (78, 60, 60))
 
                 knopka.prorisovka(sc)
 
                 #knopka 3
-                knopka = knopo4ki(choice_1[2],pos3,(10,140,13))
+                knopka = Knopo4ki(choice_1[2], pos3, (10, 140, 13))
 
                 knopka.prorisovka(sc)
 
                 #knopka 4
-                knopka = knopo4ki(choice_1[3],pos4,(200,30,50))
+                knopka = Knopo4ki(choice_1[3], pos4, (200, 30, 50))
 
                 knopka.prorisovka(sc)
 

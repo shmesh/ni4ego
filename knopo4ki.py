@@ -5,7 +5,7 @@ WHITE = [255,255,255]
 
 
 
-class knopo4ki:
+class Knopo4ki:
     def __init__(self,text,pos,col):
         self.text = text
         self.action = None
