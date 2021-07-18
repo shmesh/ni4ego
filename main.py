@@ -124,7 +124,7 @@ while game:
                         picture.prorisovka(sc)
 
                     if count1 == 4:
-                        picture = Picture((1920,1080), 'kartinki/церковь.jpg', (0, 0))
+                        picture = Picture((1920,1080), 'kartinki/loc.jpg', (0, 0))
                         picture.prorisovka(sc)
 
 
@@ -144,7 +144,7 @@ while game:
 
 
             if count2 == 3:
-                picture = Picture((1280,905),'kartinki/персонажи.jpg',(0,0))
+                picture = Picture((1280,905), 'kartinki/p.jpg', (0, 0))
                 picture.prorisovka(sc)
                 #knopka 1
                 knopka = Knopo4ki(choice_1[0], pos1, (100, 30, 130))
